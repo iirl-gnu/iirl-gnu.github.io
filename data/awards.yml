@@ -1,0 +1,98 @@
+# 수상 실적. 맨 위에 추가하면 최신순으로 표시됩니다.
+#
+#   - year: 2025           # 모르면 비워두세요
+#     event: 대회/학회 이름
+#     prize: 장려상
+#     topic: 주제 또는 논문 제목     # 선택
+#     winners: 홍길동, 김철수
+
+- year: 2025
+  event: 디바이스마트 공모전
+  prize: 장려상
+  topic: 사용자 판단 기반 얼굴 인식 도어락
+  winners: 주찬혁, 김학찬
+
+- year:
+  event: 농업용 AI 로봇 응용 및 실습 프로그램
+  prize: 장려상
+  winners: 주찬혁
+
+- year:
+  event: 제3회 동남권 이모빌리티 페스티벌
+  prize: 대상 (1등)
+  topic: 배터리 양방향 열 제어 장치
+  winners: 권동현, 김민재, 고다완, 박상민, 민병훈
+
+- year: 2024
+  event: 한국기계가공학회 추계학술대회
+  prize: 혁신상
+  topic: BLDC 모터 기반 헬스 머신 보조 장치
+  winners: 하지훈, 김지훈, 박성환
+
+- year: 2024
+  event: 한국기계가공학회 추계학술대회
+  prize: 혁신상
+  topic: 웹캠과 컴퓨터 비전 기반 양손 재활 운동 시스템 개발
+  winners: 김민재, 이동언, 하지훈, 주찬혁
+
+- year: 2024
+  event: 한국기계가공학회 추계학술대회
+  prize: 혁신상
+  topic: 다축 회전구조물을 이용한 자가 발전 장치
+  winners: 박상민, 김민재, 고다완, 권동현, 민병훈
+
+- year: 2024
+  event: IP 특허캠프
+  prize: 대상 (1등)
+  winners: 박상민, 김민재, 고다완, 민병훈, 권동현
+
+- year: 2024
+  event: GNU ICEE 창의도전형 설계기반 아이디어 경진대회
+  prize: 장려상
+  winners: 김민재, 하지훈, 최진현, 권동현, 여호린, 박성환
+
+- year: 2024
+  event: 디바이스마트 공모전
+  prize: 장려상
+  topic: "스마트 트레드밀: RGBD 카메라를 이용한 트레드밀 자동 제어 시스템"
+  winners: 김민재, 하지훈
+
+- year: 2023
+  event: 디바이스마트 공모전
+  prize: 장려상
+  topic: Reaction Wheel을 이용한 공던지기 장치 실시간 제어 시스템 개발
+  winners: 박준우, 최진현, 공병훈, 정은지
+
+- year: 2023
+  event: 국립대학육성사업 동계해외탐방프로그램 (Global Pioneer Program)
+  prize: 장려
+  topic: "팀명: IIR"
+  winners: 최진현, 원동빈, 김문영, 이준우
+
+- year: 2023
+  event: 한국기계가공학회 추계학술대회
+  prize: 혁신상
+  topic: 사용자 맞춤형 스마트 체어를 통한 자세 교정 및 거북목 예방
+  winners: 최진현, 강동현, 김현빈, 김문영, 이준우, 원동빈
+
+- year: 2023
+  event: 한국기계가공학회 춘계학술대회
+  prize: 혁신상
+  topic: 딥러닝을 이용한 스마트 팩토리 생산 설비 오작동 탐지 시스템
+  winners: 박준우, 공병훈, 정은지, 최진현
+
+- year:
+  event: 항공-기계 분야 학부 연구프로그램 결과포스터 발표 대회
+  prize: 금상
+  topic: 보행 주기 인식을 위한 경량 머신 러닝 모델 연구
+  winners: 최진현
+
+- year:
+  event: 제3차 USG-AI 데이터 문제해결 제조혁신 경진대회
+  prize: 장려상
+  winners: 최진현, 권미주, 박준우, 공병훈
+
+- year: 2022
+  event: GNU 창의도전형 설계기반 아이디어 경진대회
+  prize: 우수상
+  winners: 박준우, 공병훈, 김수빈, 최연승, 최진현, 김영헌

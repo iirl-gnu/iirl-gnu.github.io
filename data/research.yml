@@ -1,0 +1,83 @@
+# 연구 분야. 순서대로 Research 페이지와 홈 화면에 표시됩니다.
+#
+#   - id: 영어-소문자-id          # demos.yml의 area와 연결
+#     title: 영어 제목
+#     title_ko: 한글 제목
+#     summary: 한두 문장 요약
+#     cover: images/research/xxx.jpg   # 홈 화면 카드 이미지
+#     topics: [세부 주제, ...]
+#     highlights:                       # 선택: 숫자로 보여줄 성과
+#       - { value: "33/33", label: "스윙업 성공" }
+#     figures:                          # 선택: 그림과 설명
+#       - { src: images/research/xxx.jpg, caption: 설명 }
+
+areas:
+  - id: physical-ai
+    title: Physical AI
+    title_ko: AI를 활용한 장치 설계 및 실시간 제어
+    summary: >-
+      생성형 AI와 강화학습으로 실제 하드웨어를 설계·시험·제어합니다.
+      LLM이 ROS 2, MATLAB 같은 도구를 직접 다루고, 실물 데이터만으로 제어기를 학습시킵니다.
+    cover: images/research/microros-bench.jpg
+    topics:
+      - ROS 2 / micro-ROS와 LLM을 활용한 실시간 장치 제어
+      - LLM이 보상과 학습 하네스를 설계하는 실기 학습 루프(HILL) 강화학습
+      - "MATLAB-MCP: LLM과 MATLAB/Simulink를 연결한 시뮬레이션·제어 가속화"
+      - 강화학습 기반 호핑 로봇 및 비선형 시스템 제어
+    highlights:
+      - { value: "33/33", label: "역진자 스윙업 성공 (0.345 s)" }
+      - { value: "0.23°", label: "평균 자세 오차" }
+      - { value: "0.35°", label: "LLM 자율 게인 튜닝 후 오차 (기존 1.65°)" }
+    figures:
+      - { src: images/research/microros-bench.jpg, caption: "제조사 드라이버 없는 BLDC 모터를 MCU + micro-ROS로 ROS 2에 연결한 시험 장치" }
+      - { src: images/research/microros-architecture.jpg, caption: "micro-ROS 연결 구조: 현장 MCU ↔ PC Agent ↔ ROS 2 통신망" }
+      - { src: images/research/hill-loop.jpg, caption: "실기 학습 루프: MCU 정책 추론 + PC 학습 + LLM 에이전트의 보상·하네스 수정" }
+
+  - id: wearable
+    title: Wearable Walking-Assist Robots
+    title_ko: 보행능력 향상을 위한 착용형 보조로봇
+    summary: >-
+      근골격계 모델과 강화학습으로 고관절·발목 보조로봇의 제어기를 개발하고,
+      일상생활 환경에서 동작하는 착용형 로봇을 설계합니다.
+    cover: images/research/hip-exo-rl-framework.jpg
+    topics:
+      - 근골격계 모델(SCONE + HyFyDy)을 활용한 강화학습 기반 고관절 보조 제어기
+      - 체중 지지를 고려한 발목 보조로봇 개발
+      - 반작용 휠과 기계식 제동을 활용한 발목 Push-off 보조장치
+      - 보행 위상 추정 및 착용형 센서 기반 보행 분석
+    figures:
+      - { src: images/research/hip-exo-rl-framework.jpg, caption: "반사 기반 근골격계 시뮬레이션과 강화학습을 결합한 고관절 보조 정책 학습 (Barati et al., RA-L 2026)" }
+      - { src: images/research/ankle-assist-mechanism.jpg, caption: "체중 지지를 고려한 발목 보조로봇 메커니즘" }
+
+  - id: sdl
+    title: AI-based Self-Driving Lab
+    title_ko: 연구 가속화를 위한 AI 기반 자율실험실
+    summary: >-
+      목표를 주면 스스로 실험을 설계·수행·평가하는 자율실험실(SDL)을 만듭니다.
+      유기 합성 자율화 플랫폼과 디스플레이 식각액 개발용 자율실험실을 연구합니다.
+    cover: images/research/synbot-modules.jpg
+    topics:
+      - AI 기반 물질 합성 자율화 플랫폼 Synbot (with 삼성전자 종합기술원)
+      - 디스플레이(OLED)용 식각액 개발을 위한 자율실험실 (with KETI)
+      - 실험 자동화 장비 제어기 설계와 로봇 이송 동작 계획
+    highlights:
+      - { value: "<1%", label: "탐색공간 대비 시도 수로 목표 수율 달성" }
+      - { value: "6×+", label: "연구자 대비 처리량" }
+      - { value: "CV<5%", label: "12회 반복 재현성" }
+    figures:
+      - { src: images/research/synbot-modules.jpg, caption: "Synbot 실제 배치(9.35 m × 6.65 m)와 모듈 (Ha et al., Sci. Adv. 2023)" }
+      - { src: images/research/synbot-structure.jpg, caption: "Synbot 구조: AI S/W 층 · 로봇 S/W 층 · 로봇 층" }
+      - { src: images/research/oled-etchant-sdl.jpg, caption: "디스플레이 식각액 개발용 자율실험실 구성" }
+
+  - id: manipulation
+    title: Force Control & Manipulation
+    title_ko: 힘 제어 및 매니퓰레이션
+    summary: >-
+      유연관절 로봇의 외력 추정과 강인 제어에서 출발해, 모바일 매니퓰레이터의
+      순응 제어와 정밀 가공 응용까지 연구합니다.
+    topics:
+      - 유연관절 로봇의 힘 제어 및 외력 추정
+      - 매니퓰레이터 기구 설계와 강인 제어
+      - 고정밀 드릴링을 위한 모바일 매니퓰레이터 순응 제어
+    video: https://drive.google.com/file/d/1GFJ4eWXU18Jg7iUYwOpJvkwj1hCbQmU7/preview
+    video_caption: 힘 정보 기반 모바일 매니퓰레이터 드릴링

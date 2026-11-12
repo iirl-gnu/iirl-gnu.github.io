@@ -1,0 +1,395 @@
+# ⚠️ 이 파일은 tools/sync_from_excel.py 가 자동으로 만듭니다.
+# 직접 고치면 다음 동기화 때 덮어써집니다. 엑셀을 고친 뒤 다시 실행하세요.
+# 생성: 2026-11-12 11:25 / 원본: 박영진_연구실적_정리.xlsx
+
+international_journal:
+  - authors: "Hossein Barati, Sangdo Kim, Nguyen Thanh Xuan, Jongwon Lee, Young Jin Park"
+    title: "End-to-End Policy Learning for Hip Exoskeleton via Reinforcement Learning and Reflex-Based Musculoskeletal Simulation"
+    venue: "IEEE Robotics and Automation Letters, vol. 11, no. 7, pp. 8672–8679"
+    year: 2026
+    doi: "10.1109/LRA.2026.3699246"
+
+  - authors: "Jaehyeon Baik, Yunho Choi, Kyung-Joong Kim, Young Jin Park, Hosu Lee"
+    title: "Tactile Sensor-Based Body Center of Pressure Estimation System Using Supervised Deep Learning Models"
+    venue: "Sensors, vol. 26, no. 1, 286 (Article No.)"
+    year: 2026
+    doi: "10.3390/s26010286"
+
+  - authors: "Taesin Ha, Dongseon Lee, Youngchun Kwon, Min Sik Park, Sangyoon Lee, Jaejun Jang, Byungkwon Choi, Hyunjeong Jeon, Jeonghun Kim, Hyundo Choi, Hyung-Tae Seo, Wonje Choi, Wooram Hong, Young Jin Park, Junwon Jang, Joonkee Cho, Bosung Kim, Hyukju Kwon, Gahee Kim, Won Seok Oh, Jin Woo Kim, Joonhyuk Choi, Minsik Min, Aram Jeon, Yongsik Jung, Eunji Kim, Hyosug Lee, Youn-Suk Choi"
+    title: "AI-driven robotic chemist for autonomous synthesis of organic molecules"
+    venue: "Science Advances, vol. 9, no. 44, eadj0461"
+    year: 2023
+    doi: "10.1126/sciadv.adj0461"
+
+  - authors: "Minhyung Lee, Jeonghun Kim, Seungyong Hyung, Jusuk Lee, Keehong Seo, Young Jin Park, Joonkee Cho, Byung-kwon Choi, Youngbo Shim, Hyundo Choi"
+    title: "A Compact Ankle Exoskeleton With a Multiaxis Parallel Linkage Mechanism"
+    venue: "IEEE/ASME Transactions on Mechatronics, vol. 26, no. 1, pp. 191–202"
+    year: 2021
+
+  - authors: "Bokman Lim, Jusuk Lee, Junwon Jang, Kyungrock Kim, Young Jin Park, Keehong Seo, Youngbo Shim"
+    title: "Delayed Output Feedback Control for Gait Assistance With a Robotic Hip Exoskeleton"
+    venue: "IEEE Transactions on Robotics, vol. 35, no. 4, pp. 1055–1062"
+    year: 2019
+    doi: "10.1109/TRO.2019.2913318"
+
+  - authors: "Hyundo Choi, Young Jin Park, Keehong Seo, Jusuk Lee, Sang-eui Lee, Youngbo Shim"
+    title: "A Multifunctional Ankle Exoskeleton for Mobility Enhancement of Gait-Impaired Individuals and Seniors"
+    venue: "IEEE Robotics and Automation Letters, vol. 3, no. 1, pp. 411–418"
+    year: 2018
+    doi: "10.1109/LRA.2017.2734239"
+
+  - authors: "Younbaek Lee, Yong-Jae Kim, Jongwon Lee, Minhyung Lee, Byungjune Choi, Jeonghun Kim, Young Jin Park, Jungyun Choi"
+    title: "Biomechanical Design of a Novel Flexible Exoskeleton for Lower Extremities"
+    venue: "IEEE/ASME Transactions on Mechatronics, vol. 22, no. 5, pp. 2058–2069"
+    year: 2017
+
+  - authors: "Ho Yu, Il Seop Choi, Min Jun Kim, Young Jin Park, Wan Kyun Chung, Kihwan Kim"
+    title: "Development of a Hydraulic Shroud Nozzle Manipulator with Robust Force Control in Continuous Casting Process"
+    venue: "ISIJ International, vol. 55, no. 5, pp. 1024–1034"
+    year: 2015
+
+  - authors: "Min Jun Kim, Young Jin Park, Wan Kyun Chung"
+    title: "Design of a Momentum-Based Disturbance Observer for Rigid and Flexible Joint Robots"
+    venue: "Intelligent Service Robotics, vol. 8, no. 1, pp. 57–65"
+    year: 2015
+    doi: "10.1007/s11370-014-0163-9"
+
+  - authors: "Young Jin Park, Wan Kyun Chung"
+    title: "External Torque-Sensing Algorithm for Flexible-Joint Robot Based on Kalman Filter"
+    venue: "IET Electronics Letters, vol. 49, no. 14, pp. 877–878"
+    year: 2013
+
+domestic_journal:
+  - authors: "김민재, 주찬혁, 박영진"
+    title: "반작용 휠과 기계식 제동을 활용한 순간 고토크 기반 발목 Push-off 보조장치 선행연구"
+    title_en: "A Pilot Study of an Ankle Assistive Device With a Reaction Wheel and Mechanical Braking for Impulsive Push-off Torque Generation"
+    venue: "제어로봇시스템학회 논문지, 제31권, 제10호, pp. 1181–1187"
+    year: 2025
+    doi: "10.5302/J.ICROS.2025.25.0131"
+
+  - authors: "김민재, 박세준, 이호수, 박영진"
+    title: "손실함수를 재정의한 GRU 기반 학습 알고리즘을 통한 보행위상 예측 성능 향상"
+    title_en: "Improving Gait Phase Prediction via a GRU-Based Learning Algorithm with a Redefined Loss Function"
+    venue: "로봇학회 논문지, 제20권, 제1호, pp. 130–137"
+    year: 2025
+    doi: "10.7746/jkros.2025.20.1.130"
+
+  - authors: "추정연, 백재현, 정강수, 정승원, 박영진, 이호수"
+    title: "합성곱 신경망(CNN) 기반 새로운 호흡 환기량 추정 모델 개발"
+    title_en: "Development of a Novel Ventilation Estimation Model Based on Convolutional Neural Network (CNN)"
+    venue: "로봇학회 논문지, 제20권, 제1호, pp. 138–143"
+    year: 2025
+    doi: "10.7746/jkros.2025.20.1.138"
+
+  - authors: "김지욱, 박경렬, 김현종, 김운성, 강성민, 정경은, 최용석, 동와룡, 황성민, 박영진, 이경준"
+    title: "피치베어링용 고무 씰(Seal) 마모거동 평가 및 수명예측"
+    title_en: "Wear Behavior Evaluation and Life Prediction of Rubber Seals for Pitch Bearings"
+    venue: "한국트라이볼로지학회지, 제40권, 제6호, pp. 215–221"
+    year: 2024
+
+  - authors: "강성민, 최용석, 김운성, 정경은, 양승준, 박영진, 이경준"
+    title: "모노레일 주행 롤러 지지용 볼 베어링 리테이너의 파손 원인 분석"
+    title_en: "Failure Analysis of Ball Bearing Retainer Supporting Monorail Drive Roller"
+    venue: "한국트라이볼로지학회지, 제40권, 제5호, pp. 157–162"
+    year: 2024
+
+  - authors: "강성민, 장호철, 최용석, 박경렬, 정경은, 김운성, 정재호, 박영진, 이경준"
+    title: "10MW 이상급 해상풍력 복합재(EVA) 적용 구조물 타당성에 대한 연구"
+    title_en: "The Feasibility Study of Float Structure with EVA for Offshore Wind Turbine (10MW or higher)"
+    venue: "한국기계기술학회지, 제25권, 제6호, pp. 1151–1157"
+    year: 2023
+    doi: "10.17958/ksmt.25.6.202312.1151"
+
+  - authors: "최용석, 박경렬, 강성민, 김운성, 정경은, 박영진, 이경준"
+    title: "모래 3체 마모시험 장비(3-body abrasion tester)를 이용한 PLA프린팅 표면의 형상별 트라이볼로지 성능 분석"
+    title_en: "Tribology Performance Analysis by Surface Patterns of PLA Printing Samples Using 3-body Abrasion Tester"
+    venue: "한국트라이볼로지학회지, 제39권, 제6호, pp. 250–255"
+    year: 2023
+
+  - authors: "박경렬, 최용석, 강성민, 김운성, 정경은, 박영진, 이경준"
+    title: "구름 마모시험 장비(Rolling wear tester)를 이용한 마모 후의 접촉각과 자가세정 효과와의 관계 규명을 통한 재료 내구성 평가"
+    title_en: "Evaluation of Material Durability by Identifying the Relationship between Contact Angle after Wear and Self-cleaning Effect Using Rolling Wear Tester"
+    venue: "한국트라이볼로지학회지, 제39권, 제6호, pp. 256–261"
+    year: 2023
+
+  - authors: "박영진, 정완균"
+    title: "유연관절로봇을 위한 정확한 외부토크 측정시스템 개발: 랜덤워크모델을 이용한 칼만필터 기반 추정"
+    title_en: "Exact External Torque Sensing System for Flexible-Joint Robot: Kalman Filter Estimation with Random-Walk Model"
+    venue: "로봇학회 논문지, 제9권, 제1호, pp. 11–19"
+    year: 2014
+    doi: "10.7746/jkros.2014.9.1.011"
+
+  - authors: "박영진, 정완균"
+    title: "유연관절로봇의 모터 동역학을 정확하게 재설정하기 위한 적분매니폴드 피드백제어 개발"
+    title_en: "Exact Reshaping of Motor Dynamics in Flexible-Joint Robot using Integral Manifold Feedback Control"
+    venue: "로봇학회 논문지, 제9권, 제1호, pp. 20–27"
+    year: 2014
+
+international_conference:
+  - authors: "Thanh Xuan Nguyen, Hossein Barati, Young Jin Park"
+    title: "Braking-Phase Energy Driving Ankle Assistance: A Pilot Study"
+    venue: "International Conference on Control, Automation and Systems (ICCAS), Sapporo, Japan"
+    year: 2026
+
+  - authors: "Geonhee Ryu, Hokyeong Jin, Young Jin Park"
+    title: "Faster Inference Is Not Always Better: Inference-Time Sensitivity of RL Policies Trained with On-MCU Inference"
+    venue: "International Conference on Control, Automation and Systems (ICCAS), Sapporo, Japan"
+    year: 2026
+
+  - authors: "Hossein Barati, Sangdo Kim, Nguyen Thanh Xuan, Jongwon Lee, Young Jin Park"
+    title: "Deep Reinforcement Learning for Hip Exoskeleton Control via Predictive Simulation of Reflex-Based Human Gait"
+    venue: "IEEE International Conference on Robotics and Automation (ICRA), Vienna, Austria, pp. 22340–22347"
+    year: 2026
+
+  - authors: "Hossein Barati, Young Jin Park"
+    title: "Optimized Kalman Filter for External Force Estimation Using Deep Reinforcement Learning"
+    venue: "International Conference on Control, Automation and Systems (ICCAS), Incheon, Korea"
+    year: 2025
+
+  - authors: "Byungjune Choi, Younbaek Lee, Jongwon Lee, Minhyung Lee, Bokman Lim, Young Jin Park, Kyungrock Kim, Yong-Jae Kim, Youngbo Shim"
+    title: "Development of Adjustable Knee Assist Device for Wearable Robot based on Linkage and Rolling Joint"
+    venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Macau, China, pp. 4043–4050"
+    year: 2019
+    doi: "10.1109/IROS40897.2019.8967826"
+
+  - authors: "Keehong Seo, Young Jin Park, Jusuk Lee, Seungyong Hyung, Minhyung Lee, Jeonghun Kim, Hyundo Choi, Youngbo Shim"
+    title: "RNN-Based On-Line Continuous Gait Phase Estimation from Shank-Mounted IMUs to Control Ankle Exoskeletons"
+    venue: "International Conference on Rehabilitation Robotics (ICORR), Toronto, ON, Canada, pp. 809–815"
+    year: 2019
+    doi: "10.1109/ICORR.2019.8779554"
+
+  - authors: "Keehong Seo, Kyungrock Kim, Young Jin Park, Joon-Kee Cho, Jongwon Lee, Byungjune Choi, Bokman Lim, Younbaek Lee, Youngbo Shim"
+    title: "Adaptive Oscillator-Based Control for Active Lower-Limb Exoskeleton and its Metabolic Impact"
+    venue: "IEEE International Conference on Robotics and Automation (ICRA), Brisbane, Australia, pp. 6752–6758"
+    year: 2018
+    doi: "10.1109/ICRA.2018.8460841"
+
+  - authors: "Byungjune Choi, Younbaek Lee, Yong-Jae Kim, Jongwon Lee, Minhyung Lee, Se-gon Roh, Young Jin Park, Kyungrock Kim, Youngbo Shim"
+    title: "Development of Adjustable Knee Joint for Walking Assistance Devices"
+    venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Vancouver, Canada, pp. 1790–1797"
+    year: 2017
+    doi: "10.1109/IROS.2017.8205993"
+
+  - authors: "Keehong Seo, Jusuk Lee, Young Jin Park"
+    title: "Autonomous Hip Exoskeleton Saves Metabolic Cost of Walking Uphill"
+    venue: "International Conference on Rehabilitation Robotics (ICORR), London, UK, pp. 246–251"
+    year: 2017
+    doi: "10.1109/ICORR.2017.8009254"
+
+  - authors: "Young Jin Park, Wan Kyun Chung"
+    title: "External Torque-Sensing Algorithm for Flexible-Joint Robot based on Disturbance Observer Structure"
+    venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Chicago, IL, USA, pp. 4735–4741"
+    year: 2014
+    doi: "10.1109/IROS.2014.6943236"
+
+  - authors: "Young Jin Park, Wan Kyun Chung"
+    title: "Discrete-time Implementation of Disturbance Observer based on Robust Internal-Loop Compensator Structure: Easy-to-implement Approach"
+    venue: "International Conference on Ubiquitous Robots and Ambient Intelligence (URAI), Jeju, Korea, pp. 335–339"
+    year: 2013
+    doi: "10.1109/URAI.2013.6677381"
+
+  - authors: "Young Jin Park, Wan Kyun Chung"
+    title: "Unified External Torque-Sensing Algorithm for Flexible-Joint Robot based on Kalman Filter"
+    venue: "International Conference on Ubiquitous Robots and Ambient Intelligence (URAI), Jeju, Korea, pp. 78–79"
+    year: 2013
+    doi: "10.1109/URAI.2013.6677476"
+
+  - authors: "Young Jin Park, Wan Kyun Chung"
+    title: "Integral Anti-windup Implementation of Disturbance Observer for Exoskeleton Application"
+    venue: "International Conference on Ubiquitous Robots and Ambient Intelligence (URAI), Daejeon, Korea, pp. 573–574"
+    year: 2012
+
+  - authors: "Young Jin Park, Hosun Lee, Yonghwan Oh, Wan Kyun Chung"
+    title: "Development of Kalman Filter based Two-port Body Force Observer for the Flexible Joint: Design and Experiments"
+    venue: "IEEE International Conference on Robotics and Automation (ICRA), Saint Paul, USA, pp. 2717–2722"
+    year: 2012
+    doi: "10.1109/ICRA.2012.6225384"
+
+  - authors: "Hyoungkyun Kim, Byungjae Park, Jongwon Lee, Young Jin Park, Wan Kyun Chung"
+    title: "A Parameter Estimation Method for the Bilateral Teleoperation Framework for an O2 Lance Manipulator"
+    venue: "IEEE International Conference on Automation Science and Engineering (CASE), Seoul, Korea, pp. 564–568"
+    year: 2012
+    doi: "10.1109/CoASE.2012.6386468"
+
+  - authors: "Sunghwan Shin, In Lee, Hojin Lee, Gabjong Han, Kyungpyo Hong, Sunghoon Yim, Jongwon Lee, Young Jin Park, Byeong Ki Kang, Dae Ho Ryoo, Dae Whan Kim, Seungmoon Choi, Wan Kyun Chung"
+    title: "Haptic Simulation of Refrigerator Door"
+    venue: "IEEE Haptics Symposium, Vancouver, Canada, pp. 147–154"
+    year: 2012
+    doi: "10.1109/HAPTIC.2012.6183783"
+
+  - authors: "Ho Yu, Young Jin Park, Il Seop Choi, Wan Kyun Chung, Kihwan Kim"
+    title: "Design and Control of Multi-degree-of-freedom Shroud Nozzle Hydraulic Manipulator in Steel Manufacturing"
+    venue: "IEEE International Conference on Automation Science and Engineering (CASE), Seoul, Korea, pp. 534–539"
+    year: 2012
+    doi: "10.1109/CoASE.2012.6386308"
+
+  - authors: "Young Jin Park, Wan Kyun Chung"
+    title: "Reinterpretation of Force Integral Control Considering the Control Ability of System Input"
+    venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Taipei, Taiwan, pp. 3586–3591"
+    year: 2010
+    doi: "10.1109/IROS.2010.5649976"
+
+  - authors: "KyuJin Jo, Jongwon Lee, Youngjin Park, Wan Kyun Chung"
+    title: "A Microsurgery Robotic System with Wrist Action for Fingertip Replantation Surgery"
+    venue: "JSME Robotics and Mechatronics Conference (ROBOMEC), Fukuoka, Japan, pp. 2588–2594"
+    year: 2009
+
+domestic_conference:
+  - authors: "류건희, 박영진"
+    title: "Non-Sim으로 실세계 강화학습을 위한 MCU-PC 분산 학습 프레임워크"
+    title_en: "A Distributed MCU-PC Reinforcement Learning Framework for Simulator-free Real-World Training and Inference on Edge Devices"
+    venue: "제41회 제어·로봇·시스템학회 학술대회 (ICROS 2026), 대구 EXCO"
+    year: 2026
+
+  - authors: "진호경, 박영진"
+    title: "비전 기반 몸통 추적 이용한 실시간 트레드밀 추종 제어 시스템 설계"
+    title_en: "Design of a Real-Time Treadmill Tracking Control System Using Vision-Based Torso Depth Estimation"
+    venue: "제41회 제어·로봇·시스템학회 학술대회 (ICROS 2026), 대구 EXCO"
+    year: 2026
+
+  - authors: "이동언, 박영진"
+    title: "Vision-Language Model을 이용한 범용 객체 파지를 위한 로봇 알고리즘 설계"
+    venue: "제21회 한국로봇종합학술대회 (KRoC 2026), 강원, pp. 697–699"
+    year: 2026
+
+  - authors: "주찬혁, 김주영, 허성민, 박성환, 박영진"
+    title: "오물풍선 포획용 지능형 그리퍼를 장착한 드론 시스템"
+    title_en: "Intelligent Drone System with Line-fixing Gripper for Waste Balloon Removal"
+    venue: "제21회 한국로봇종합학술대회 (KRoC 2026), 강원, pp. 1506–1508"
+    year: 2026
+
+  - authors: "하지훈, 이동언, 박영진"
+    title: "강화학습 기반 상모돌리기 동작의 Sim2Real 구현"
+    title_en: "Sim2Real Implementation of Sangmo-Spinning Motion Based on Reinforcement Learning"
+    venue: "제40회 제어·로봇·시스템학회 학술대회 (ICROS 2025), 전북대학교 국제컨벤션센터"
+    year: 2025
+
+  - authors: "이동언, 하지훈, 김민재, 박영진"
+    title: "이륜 자율균형 로봇의 강화학습 기반 제어 및 Sim-to-Real 적용"
+    title_en: "Reinforcement Learning-Based Control and Sim-to-Real Transfer for a Two-Wheeled Self-Balancing Robot"
+    venue: "제40회 제어·로봇·시스템학회 학술대회 (ICROS 2025), 전북대학교 국제컨벤션센터"
+    year: 2025
+
+  - authors: "최진현, 원동빈, 이준우, 박영진"
+    title: "보행 인식을 위한 경량 기계학습 모델 연구"
+    title_en: "A Study on Lightweight Machine Learning Model’s for Gait Cycle Recognition"
+    venue: "제19회 한국로봇종합학술대회 (KRoC 2024), 강원 평창 (휘닉스 평창), pp. 553–554"
+    year: 2024
+
+  - authors: "김문영, 김현빈, 박영진"
+    title: "발목 보조 로봇을 위한 에너지 저장 기반 구동기 개발"
+    title_en: "Pilot Study of Reaction Wheel-based Actuation for Ankle Assist Robot"
+    venue: "제19회 한국로봇종합학술대회 (KRoC 2024), 강원 평창 (휘닉스 평창), pp. 670–671"
+    year: 2024
+
+  - authors: "박준우, 공병훈, 최진현, 정은지, 박영진"
+    title: "순간출력 발생기로서 플라이휠 구동기의 의미"
+    title_en: "Significance of Flywheel-Based Actuators as Instantaneous Power Generators"
+    venue: "제38회 제어·로봇·시스템학회 학술대회 (ICROS 2023), 삼척 쏠비치"
+    year: 2023
+
+patents_granted:
+  - number: "US11951066"
+    title: "Walking assistance method and apparatus"
+    date: "2024-04-09"
+
+  - number: "US11754350"
+    title: "Heat exchanger module, assembly-type heat exchanger including heat exchanger module, and heat exchanger assembly system"
+    date: "2023-09-12"
+
+  - number: "US11717187"
+    title: "Walking assistance method and apparatuses"
+    date: "2023-08-08"
+
+  - number: "US11633320"
+    title: "Method of controlling walking assistance device and electronic device performing the method"
+    date: "2023-04-25"
+
+  - number: "US11590047"
+    title: "Walking assistance apparatus"
+    date: "2023-02-28"
+
+  - number: "US11564858"
+    title: "Walking assistance method and walking assistance apparatus performing the same"
+    date: "2023-01-31"
+
+  - number: "US11109778"
+    title: "Walking assistance method and apparatuses"
+    date: "2021-09-07"
+
+  - number: "US11020249"
+    title: "Actuator and motion assistance apparatus including the same"
+    date: "2021-06-01"
+
+  - number: "US10945907"
+    title: "Motion assistance apparatus"
+    date: "2021-03-16"
+
+  - number: "US10828224"
+    title: "Power transmitting device and motion assistance apparatus including the same"
+    date: "2020-11-10"
+
+  - number: "US10792212"
+    title: "Torque setting method and apparatus"
+    date: "2020-10-06"
+
+  - number: "US10702440"
+    title: "Motion assistance apparatus and method of controlling the same"
+    date: "2020-07-07"
+
+  - number: "US10617590"
+    title: "Motion assistance apparatus"
+    date: "2020-04-14"
+
+  - number: "US10583018"
+    title: "Method of identifying parameter of characteristic of muscle, and walking assistance apparatuses and method based on the method"
+    date: "2020-03-10"
+
+  - number: "US10576619"
+    title: "Assisting torque setting method and apparatus"
+    date: "2020-03-03"
+
+  - number: "US10548801"
+    title: "Motion assistance apparatus"
+    date: "2020-02-04"
+
+  - number: "US10531967"
+    title: "Walking assistance apparatus and operation method of the same"
+    date: "2020-01-14"
+
+  - number: "US10517788"
+    title: "Power transmission device and motion assistance device comprising the same"
+    date: "2019-12-31"
+
+  - number: "US10500069"
+    title: "Driving module and motion assistance apparatus including the same"
+    date: "2019-12-10"
+
+  - number: "US10335341"
+    title: "Walking assistance method and apparatus"
+    date: "2019-07-02"
+
+  - number: "US10022288"
+    title: "Torque setting method and apparatus"
+    date: "2018-07-17"
+
+patents_applied: []
+patents_domestic:
+  - number: "10-2025-0142253"
+    title: "실린더형 캠을 이용한 동력 전달 장치"
+    title_en: "Barrel Cam-Based Power Transmission Device"
+    inventors: "박영진, 송창훈, 김민경"
+    date: "2025-09-30"
+
+  - number: "10-2025-0122093"
+    title: "보행 보조장치"
+    title_en: "Walking Assistance Device"
+    inventors: "박영진, 김민재, 주찬혁"
+    date: "2025-08-29"
+
+  - number: "10-2024-0143185"
+    title: "회전 구조물을 이용한 자가 발전 장치"
+    title_en: "Self-Powered Device Using Rotating Structure"
+    inventors: "박상민, 고다완, 민병훈, 권동현, 김민재, 박영진, 채민우"
+    date: "2024-10-18"
+

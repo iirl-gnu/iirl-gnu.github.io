@@ -1,0 +1,24 @@
+# 사이트 공통 정보 (헤더, 푸터, 홈 화면, Contact 페이지에서 사용)
+
+name: IIRLab
+full_name: Intelligent and Interactive Robotics Lab
+full_name_ko: 지능 및 상호작용 로보틱스 연구실
+affiliation: School of Mechanical Engineering, Gyeongsang National University
+headline: 인간기계협업 및 AI 자율화
+tagline: >-
+  인간과 로봇이 안전하게 공존하며 협력하는 기술, 그리고 인간과 독립적으로 활동하는 로봇 기술을 연구합니다.
+  피지컬 AI, 착용형 보행보조로봇, AI 기반 자율실험실이 주요 연구 분야입니다.
+
+contact:
+  email: youngjin.park@gnu.ac.kr
+  phone: (055) 772-1621
+  address_ko: 52828 경상남도 진주시 진주대로 501 경상국립대학교 403동 410호
+  address_en: 403-410, Gyeongsang National University, 501 Jinju-daero, Jinju, Gyeongnam 52828, Republic of Korea
+  map_embed: https://www.google.com/maps?q=35.15586,128.093864&z=17&output=embed
+
+recruit:
+  title: Join IIRLab
+  body: >-
+    이제는 원한다면 누구나 장치를 만들 수 있는 시대입니다. 동작하는 장치로 제어를 이해하고,
+    이를 바탕으로 새로운 발견에 진심인 학부생과 대학원생을 언제나 환영합니다.
+    기계공학, 전기전자공학, 컴퓨터공학 등 전공은 묻지 않습니다.

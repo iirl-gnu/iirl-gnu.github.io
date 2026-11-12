@@ -1,0 +1,72 @@
+# 연구 장비. 분류(category)별로 묶여서 표시됩니다.
+#
+#   - name: 장비 이름
+#     spec: "DOF: 7"        # 선택: 짧은 사양
+#     image: images/equipment/xxx.jpg
+
+- category: Robots
+  items:
+    - name: Franka Research 3
+      spec: "DOF: 7"
+      image: ""
+    - name: Neuromeka Moby
+      spec: "DOF: 6 + 2 (mobile manipulator)"
+      image: ""
+    - name: KUKA LBR iiwa
+      spec: "DOF: 7"
+      image: ""
+
+- category: 3D Printers
+  items:
+    - name: BCN3D Epsilon W50
+      image: ""
+    - name: CreatBot D600 Pro 2
+      image: ""
+    - name: Bambu Lab X1E
+      image: ""
+    - name: Bambu Lab X1-Carbon
+      image: ""
+    - name: Markforged 3D Printer
+      image: ""
+
+- category: CNC Machines
+  items:
+    - name: Pocket NC V2-10 (5-axis)
+      image: ""
+
+- category: Sensors
+  items:
+    - name: Pedar
+      spec: 인솔형 압력분포 측정기
+      image: ""
+    - name: Xsens MVN Awinda Starter
+      spec: IMU 모션 캡처
+      image: ""
+    - name: COSMED K5
+      spec: 대사 측정기
+      image: ""
+    - name: Noraxon Ultium EMG
+      spec: 근전도 센서
+      image: ""
+
+- category: Mobile Robots
+  items:
+    - name: TurtleBot 4
+      image: ""
+    - name: TurtleBot 3 Burger
+      image: ""
+
+- category: Drones
+  items:
+    - name: Parrot ANAFI Ai
+      image: ""
+    - name: Tello
+      image: ""
+    - name: Tello EDU
+      image: ""
+
+- category: Controllers
+  items:
+    - name: Speedgoat
+      spec: Real-time target machine
+      image: ""

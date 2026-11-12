@@ -1,0 +1,107 @@
+# 구성원 정보
+#
+# 새 학생 추가: members 아래 알맞은 그룹(phd / ms / undergrad)에 항목을 추가하세요.
+# 졸업 시: members에서 지우고 alumni 아래 해당 그룹으로 옮기세요.
+#
+#   - name: 홍길동
+#     name_en: Gildong Hong     # 선택
+#     photo: images/people/hong.jpg   # 선택 (없으면 이니셜로 표시)
+#     email: someone@gnu.ac.kr
+#     interests: [Robot Control, Exoskeleton]
+#     cv:                       # 선택: 이력 (펼쳐보기로 표시)
+#       - 2024.03 - Current | M.S. Student, Gyeongsang National University
+
+professor:
+  name: Youngjin Park
+  name_ko: 박영진
+  title: Associate Professor
+  department: School of Mechanical Engineering, Gyeongsang National University
+  photo: ""   # 예: images/people/youngjin-park.jpg (없으면 이니셜 표시)
+  phone: +82-55-772-1621
+  email: youngjin.park@gnu.ac.kr
+  office: Room 410, Building 403, Gajwa Campus
+  research_fields:
+    - title: Physical AI
+      items:
+        - AI-driven Device Design and Real-time Control (ROS 2, LLM)
+        - Real-hardware Reinforcement Learning
+    - title: Wearable Walking-Assist Robots
+      items:
+        - RL-based Hip Exoskeleton Control with Musculoskeletal Models
+        - Ankle Assist Robots (GEMS-Hip/Knee/Ankle at SAIT)
+    - title: AI-based Self-Driving Lab
+      items:
+        - Autonomous Synthesis Platform (Synbot)
+        - Self-Driving Lab for Display Etchant Development
+    - title: Manipulation Control
+      items:
+        - Force Control / Estimation for Flexible-Joint Robots
+        - Robust Control for Manipulators
+  education:
+    - period: "2014"
+      title: Ph.D., Mechanical Engineering, POSTECH
+      note: "Thesis: External Torque-Sensing Algorithm for Flexible-Joint Robot"
+    - period: "2006"
+      title: B.S., Mechanical Engineering & Electrical Engineering, POSTECH
+      note: Graduated Summa Cum Laude from the College of Engineering
+  employment:
+    - period: 2022.09 – Present
+      title: Assistant / Associate Professor, Gyeongsang National University
+    - period: 2022.03 – 2022.08
+      title: Principal Researcher, Samsung Advanced Institute of Technology
+    - period: 2014.04 – 2022.02
+      title: Research Staff Member, Samsung Advanced Institute of Technology
+
+members:
+  - group: Ph.D. Students
+    people:
+      - name: Nguyen Thanh Xuan
+        name_alt: 응우옌탄쑤안
+        photo: ""
+        email: xuan.hn12@gnu.ac.kr
+        interests: [Lower-limb Exoskeleton, Optimal Design, Human-Robot Interaction]
+        cv:
+          - 2024.09 – Current | Ph.D. Student, Mechanical Engineering, Gyeongsang National University
+          - 2020.10 – 2023.01 | M.S., Mechatronics Engineering, Hanoi University of Science and Technology
+          - 2015.09 – 2020.01 | B.S., Mechatronics Engineering, Hanoi University of Science and Technology
+
+  - group: M.S. Students
+    people:
+      - name: Hossein Barati
+        photo: ""
+        email: hosseinbarati39@gmail.com
+        interests: [Reinforcement Learning, Neuromusculoskeletal Simulation, Rehabilitation Robotics, Intelligent Control]
+        cv:
+          - 2024.09 – Current | M.S. Student, Mechanical Engineering, Gyeongsang National University
+          - 2019.09 – 2024.08 | B.S., Mechanical Engineering, Ferdowsi University of Mashhad
+
+  - group: Undergraduate Students
+    people:
+      - name: 진호경
+        name_alt: Hokyeong Jin
+        photo: ""
+        email: wlsghrud001@gnu.ac.kr
+        interests: [ROS2 for Mobile Robots, Mechanism Design]
+        cv:
+          - Expected 2027.02 | B.S., Mechanical Engineering (Double Major in Intelligent Robotics), Gyeongsang National University
+
+# 졸업생. affiliation을 모르면 비워두세요.
+alumni:
+  - group: Master
+    people:
+      - { name: Hossein Barati, affiliation: "" }
+  - group: Undergraduate
+    people:
+      - { name: 주찬혁, affiliation: DGIST }
+      - { name: 이동언, affiliation: UNIST }
+      - { name: 하지훈, affiliation: GIST }
+      - { name: 원동빈, affiliation: "" }
+      - { name: 하준호, affiliation: Hanwha Ocean }
+      - { name: 김현빈, affiliation: "" }
+      - { name: 이준우, affiliation: Hanwha Ocean }
+      - { name: 김문영, affiliation: "" }
+      - { name: 최진현, affiliation: "" }
+      - { name: 김수빈, affiliation: Ph.D. at OSU }
+      - { name: 공병훈, affiliation: UNIST }
+      - { name: 정은지, affiliation: "" }
+      - { name: 박준우, affiliation: "" }
