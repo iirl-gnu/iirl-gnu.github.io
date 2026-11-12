@@ -3,14 +3,14 @@
 Intelligent and Interactive Robotics Lab (경상국립대학교 기계공학부) 홈페이지입니다.
 GitHub Pages로 배포되며, 빌드 과정 없이 파일을 고치면 바로 반영됩니다.
 
-- 주소: https://iirlab-gnu.github.io
-- 저장소: https://github.com/iirlab-GNU/iirlab-GNU.github.io
+- 주소: https://iirl-gnu.github.io
+- 저장소: https://github.com/iirl-gnu/iirl-gnu.github.io
 
 ---
 
 ## 0. 관리자 화면에서 수정하기 (가장 쉬움)
 
-**https://iirlab-gnu.github.io/admin/** (사이트 맨 아래 "관리자" 링크)
+**https://iirl-gnu.github.io/admin/** (사이트 맨 아래 "관리자" 링크)
 
 뉴스, 데모 영상, 구성원, 수상, 장비, 연구 분야, 연락처를 입력 양식으로 고치고 **저장**하면
 GitHub에 바로 커밋되어 1~2분 뒤 사이트에 반영됩니다. ([Sveltia CMS](https://sveltiacms.app) 사용, 설정은 `admin/config.yml`)
@@ -21,8 +21,8 @@ GitHub에 바로 커밋되어 1~2분 뒤 사이트에 반영됩니다. ([Sveltia
    학생 계정은 저장소 **Settings → Collaborators → Add people**로 초대합니다.
 2. 본인 계정으로 GitHub 로그인 → https://github.com/settings/personal-access-tokens/new
    - Token name: `iirlab-admin` / Expiration: 원하는 기간 (예: 1년)
-   - Resource owner: `iirlab-GNU`
-   - Repository access: **Only select repositories** → `iirlab-GNU.github.io`
+   - Resource owner: `iirl-gnu`
+   - Repository access: **Only select repositories** → `iirl-gnu.github.io`
    - Permissions → Repository permissions → **Contents: Read and write**
    - **Generate token** → 나온 토큰(`github_pat_...`)을 복사
 3. 관리자 화면에서 **Sign In Using Access Token** → 토큰 붙여넣기
@@ -97,12 +97,12 @@ python -m http.server 8000
 
 ### 처음 한 번
 
-1. [GitHub Desktop](https://desktop.github.com/) 설치 → `iirlab-GNU` 계정으로 로그인
+1. [GitHub Desktop](https://desktop.github.com/) 설치 → `iirl-gnu` 계정으로 로그인
 2. **File → Add local repository** → 이 폴더 선택 → "create a repository" 클릭
-   - Name: `iirlab-GNU.github.io` (이 이름이어야 주소가 `iirlab-gnu.github.io`가 됩니다)
+   - Name: `iirl-gnu.github.io` (이 이름이어야 주소가 `iirl-gnu.github.io`가 됩니다)
 3. **Publish repository** → "Keep this code private" **체크 해제** (무료 계정은 공개 저장소만 Pages 가능)
 4. github.com의 저장소 → **Settings → Pages** → Source: `Deploy from a branch`, Branch: `main` / `(root)` → Save
-5. 1~2분 뒤 https://iirlab-gnu.github.io 접속
+5. 1~2분 뒤 https://iirl-gnu.github.io 접속
 
 ### 이후 수정할 때
 

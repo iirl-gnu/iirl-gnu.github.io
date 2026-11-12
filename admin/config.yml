@@ -1,10 +1,10 @@
-# 관리자 화면(https://iirlab-gnu.github.io/admin/) 설정
+# 관리자 화면(https://iirl-gnu.github.io/admin/) 설정
 # 저장하면 GitHub 저장소에 바로 커밋되고, 1~2분 뒤 사이트에 반영됩니다.
 # 논문·특허·과제(publications.yml, projects.yml)는 엑셀에서 자동 생성되므로 여기서 편집하지 않습니다.
 
 backend:
   name: github
-  repo: iirlab-GNU/iirlab-GNU.github.io
+  repo: iirl-gnu/iirl-gnu.github.io
   branch: main
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
@@ -13,8 +13,8 @@ backend:
     uploadMedia: "Upload “{{path}}”"
     deleteMedia: "Delete “{{path}}”"
 
-site_url: https://iirlab-gnu.github.io
-display_url: https://iirlab-gnu.github.io
+site_url: https://iirl-gnu.github.io
+display_url: https://iirl-gnu.github.io
 
 media_folder: /images/uploads
 public_folder: /images/uploads
