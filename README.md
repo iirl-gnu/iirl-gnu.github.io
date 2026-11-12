@@ -8,6 +8,32 @@ GitHub Pages로 배포되며, 빌드 과정 없이 파일을 고치면 바로 �
 
 ---
 
+## 0. 관리자 화면에서 수정하기 (가장 쉬움)
+
+**https://iirlab-gnu.github.io/admin/** (사이트 맨 아래 "관리자" 링크)
+
+뉴스, 데모 영상, 구성원, 수상, 장비, 연구 분야, 연락처를 입력 양식으로 고치고 **저장**하면
+GitHub에 바로 커밋되어 1~2분 뒤 사이트에 반영됩니다. ([Sveltia CMS](https://sveltiacms.app) 사용, 설정은 `admin/config.yml`)
+
+### 로그인 준비 (사람마다 처음 한 번)
+
+1. 저장소 편집 권한이 있는 GitHub 계정이 필요합니다.
+   학생 계정은 저장소 **Settings → Collaborators → Add people**로 초대합니다.
+2. 본인 계정으로 GitHub 로그인 → https://github.com/settings/personal-access-tokens/new
+   - Token name: `iirlab-admin` / Expiration: 원하는 기간 (예: 1년)
+   - Resource owner: `iirlab-GNU`
+   - Repository access: **Only select repositories** → `iirlab-GNU.github.io`
+   - Permissions → Repository permissions → **Contents: Read and write**
+   - **Generate token** → 나온 토큰(`github_pat_...`)을 복사
+3. 관리자 화면에서 **Sign In Using Access Token** → 토큰 붙여넣기
+
+- 토큰은 비밀번호와 같습니다. 다른 사람과 공유하지 말고, 사람마다 각자 만드세요.
+- 졸업 등으로 권한을 없애려면 Collaborators에서 제거하면 그 사람의 토큰도 더 이상 쓸 수 없습니다.
+- "Sign In with GitHub" 버튼은 별도 인증 서버가 필요해서 지금은 동작하지 않습니다. 토큰 로그인을 쓰세요.
+- 관리자 화면에서 저장하면 yml 파일 안의 `#` 주석(작성 예시)은 지워집니다. 예시는 이 README를 참고하세요.
+- 관리자 화면에서 고친 뒤 내 컴퓨터에서 작업할 때는 GitHub Desktop에서 **Fetch → Pull**을 먼저 하세요.
+- 논문·특허·과제는 엑셀에서 자동 생성되므로 관리자 화면에 없습니다 (아래 1번).
+
 ## 1. 논문·특허·과제 갱신 (엑셀 → 자동)
 
 `data/publications.yml`과 `data/projects.yml`은 **연구실적 엑셀에서 자동으로 만들어집니다.** 직접 고치지 마세요.
@@ -94,6 +120,7 @@ images/                          연구 그림, 사진
 assets/css/style.css             디자인 (색상은 맨 위 :root)
 assets/js/site.js                yml을 읽어 화면을 그리는 코드, 메뉴 목록
 assets/img/                      로고, 파비콘
+admin/                           관리자 화면 (Sveltia CMS) 과 입력 양식 설정
 tools/sync_from_excel.py         엑셀 → yml 변환
 tools/update.bat                 위 스크립트를 끌어다 놓기로 실행
 ```

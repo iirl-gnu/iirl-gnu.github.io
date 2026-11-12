@@ -1,0 +1,265 @@
+# 관리자 화면(https://iirlab-gnu.github.io/admin/) 설정
+# 저장하면 GitHub 저장소에 바로 커밋되고, 1~2분 뒤 사이트에 반영됩니다.
+# 논문·특허·과제(publications.yml, projects.yml)는 엑셀에서 자동 생성되므로 여기서 편집하지 않습니다.
+
+backend:
+  name: github
+  repo: iirlab-GNU/iirlab-GNU.github.io
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}” (via admin)"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+
+site_url: https://iirlab-gnu.github.io
+display_url: https://iirlab-gnu.github.io
+
+media_folder: /images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: content
+    label: 홈페이지 내용
+    files:
+      # ---------------------------------------------------------------- 뉴스
+      - name: news
+        label: 뉴스
+        file: data/news.yml
+        format: yaml
+        fields:
+          - name: news
+            label: 뉴스
+            label_singular: 뉴스
+            widget: list
+            root: true
+            add_to_top: true
+            collapsed: true
+            summary: "{{date}} · {{title}}"
+            fields:
+              - { name: date, label: 날짜, widget: datetime, type: date }
+              - { name: end_date, label: 종료일 (기간 행사일 때만), widget: datetime, type: date, required: false }
+              - { name: title, label: 제목, widget: string }
+              - { name: body, label: 설명, widget: text, required: false }
+              - { name: image, label: 사진, widget: image, required: false }
+              - { name: video, label: 영상 주소 (Google Drive/YouTube embed), widget: string, required: false }
+
+      # ---------------------------------------------------------------- 데모 영상
+      - name: demos
+        label: 데모 영상
+        file: data/demos.yml
+        format: yaml
+        fields:
+          - name: demos
+            label: 데모 영상
+            label_singular: 영상
+            widget: list
+            root: true
+            collapsed: true
+            summary: "{{title}}"
+            hint: 위에 있을수록 홈 화면 앞쪽에 나옵니다. 영상은 25MB 이하 mp4를 권장합니다.
+            fields:
+              - { name: id, label: ID (영어 소문자와 - 만), widget: string, pattern: ["^[a-z0-9-]+$", "영어 소문자, 숫자, - 만 사용하세요"] }
+              - { name: title, label: 제목, widget: string }
+              - { name: caption, label: 설명, widget: text, required: false }
+              - { name: video, label: 영상 파일, widget: file, media_folder: /media/demos, public_folder: media/demos }
+              - { name: poster, label: 대표 이미지, widget: image, media_folder: /media/demos, public_folder: media/demos }
+              - name: area
+                label: 연구 분야
+                widget: select
+                options:
+                  - { label: Physical AI, value: physical-ai }
+                  - { label: Wearable Walking-Assist Robots, value: wearable }
+                  - { label: AI-based Self-Driving Lab, value: sdl }
+                  - { label: Force Control & Manipulation, value: manipulation }
+              - { name: portrait, label: 세로 영상, widget: boolean, default: false, required: false }
+              - { name: featured, label: 홈 화면 맨 위 대표 영상 (하나만), widget: boolean, default: false, required: false }
+
+      # ---------------------------------------------------------------- 구성원
+      - name: people
+        label: 구성원
+        file: data/people.yml
+        format: yaml
+        fields:
+          - name: professor
+            label: 교수
+            widget: object
+            collapsed: true
+            fields:
+              - { name: name, label: 이름 (영문), widget: string }
+              - { name: name_ko, label: 이름 (한글), widget: string }
+              - { name: title, label: 직위, widget: string }
+              - { name: department, label: 소속, widget: string }
+              - { name: photo, label: 사진, widget: image, required: false }
+              - { name: phone, label: 전화, widget: string }
+              - { name: email, label: 이메일, widget: string }
+              - { name: office, label: 연구실 위치, widget: string }
+              - name: research_fields
+                label: 연구 분야
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: 분야, widget: string }
+                  - { name: items, label: 세부 주제, widget: list }
+              - name: education
+                label: 학력
+                widget: list
+                summary: "{{period}} {{title}}"
+                fields:
+                  - { name: period, label: 연도, widget: string }
+                  - { name: title, label: 내용, widget: string }
+                  - { name: note, label: 비고, widget: string, required: false }
+              - name: employment
+                label: 경력
+                widget: list
+                summary: "{{period}} {{title}}"
+                fields:
+                  - { name: period, label: 기간, widget: string }
+                  - { name: title, label: 내용, widget: string }
+          - name: members
+            label: 현재 구성원
+            widget: list
+            summary: "{{group}}"
+            hint: "그룹 예: Ph.D. Students / M.S. Students / Undergraduate Students"
+            fields:
+              - { name: group, label: 과정, widget: string }
+              - name: people
+                label: 학생
+                label_singular: 학생
+                widget: list
+                collapsed: true
+                summary: "{{name}}"
+                fields:
+                  - { name: name, label: 이름, widget: string }
+                  - { name: name_alt, label: 다른 표기 (영문/한글), widget: string, required: false }
+                  - { name: photo, label: 사진, widget: image, required: false }
+                  - { name: email, label: 이메일, widget: string, required: false }
+                  - { name: interests, label: 연구 관심 분야, widget: list, required: false }
+                  - { name: cv, label: "이력 (형식: 기간 | 내용)", widget: list, required: false }
+          - name: alumni
+            label: 졸업생
+            widget: list
+            summary: "{{group}}"
+            fields:
+              - { name: group, label: 과정, widget: string }
+              - name: people
+                label: 졸업생
+                label_singular: 졸업생
+                widget: list
+                summary: "{{name}} — {{affiliation}}"
+                fields:
+                  - { name: name, label: 이름, widget: string }
+                  - { name: affiliation, label: 현재 소속, widget: string, required: false }
+
+      # ---------------------------------------------------------------- 수상
+      - name: awards
+        label: 수상
+        file: data/awards.yml
+        format: yaml
+        fields:
+          - name: awards
+            label: 수상
+            label_singular: 수상
+            widget: list
+            root: true
+            add_to_top: true
+            collapsed: true
+            summary: "{{year}} {{event}} — {{prize}}"
+            fields:
+              - { name: year, label: 연도, widget: number, value_type: int, required: false }
+              - { name: event, label: 대회/학회, widget: string }
+              - { name: prize, label: 수상 등급, widget: string }
+              - { name: topic, label: 주제/논문 제목, widget: string, required: false }
+              - { name: winners, label: "수상자 (쉼표로 구분)", widget: string }
+
+      # ---------------------------------------------------------------- 장비
+      - name: equipment
+        label: 장비
+        file: data/equipment.yml
+        format: yaml
+        fields:
+          - name: equipment
+            label: 장비 분류
+            label_singular: 분류
+            widget: list
+            root: true
+            summary: "{{category}}"
+            fields:
+              - { name: category, label: 분류, widget: string }
+              - name: items
+                label: 장비
+                label_singular: 장비
+                widget: list
+                collapsed: true
+                summary: "{{name}}"
+                fields:
+                  - { name: name, label: 이름, widget: string }
+                  - { name: spec, label: 사양/설명, widget: string, required: false }
+                  - { name: image, label: 사진, widget: image, required: false }
+
+      # ---------------------------------------------------------------- 연구 분야
+      - name: research
+        label: 연구 분야
+        file: data/research.yml
+        format: yaml
+        fields:
+          - name: areas
+            label: 연구 분야
+            label_singular: 연구 분야
+            widget: list
+            collapsed: true
+            summary: "{{title}}"
+            fields:
+              - { name: id, label: ID (영어 소문자와 - 만), widget: string }
+              - { name: title, label: 제목 (영문), widget: string }
+              - { name: title_ko, label: 제목 (한글), widget: string }
+              - { name: summary, label: 요약, widget: text }
+              - { name: cover, label: 홈 화면 카드 이미지, widget: image, required: false }
+              - { name: topics, label: 세부 주제, widget: list }
+              - name: highlights
+                label: 주요 성과 수치
+                widget: list
+                required: false
+                summary: "{{value}} {{label}}"
+                fields:
+                  - { name: value, label: 숫자, widget: string }
+                  - { name: label, label: 설명, widget: string }
+              - name: figures
+                label: 그림
+                widget: list
+                required: false
+                summary: "{{caption}}"
+                fields:
+                  - { name: src, label: 이미지, widget: image }
+                  - { name: caption, label: 설명, widget: string }
+              - { name: video, label: 영상 주소 (embed), widget: string, required: false }
+              - { name: video_caption, label: 영상 설명, widget: string, required: false }
+
+      # ---------------------------------------------------------------- 기본 정보
+      - name: site
+        label: 기본 정보 (연락처·메인 문구)
+        file: data/site.yml
+        format: yaml
+        fields:
+          - { name: name, label: 약칭, widget: string }
+          - { name: full_name, label: 연구실 이름 (영문), widget: string }
+          - { name: full_name_ko, label: 연구실 이름 (한글), widget: string }
+          - { name: affiliation, label: 소속, widget: string }
+          - { name: headline, label: 메인 한 줄 문구, widget: string }
+          - { name: tagline, label: 메인 소개 문구, widget: text }
+          - name: contact
+            label: 연락처
+            widget: object
+            fields:
+              - { name: email, label: 이메일, widget: string }
+              - { name: phone, label: 전화, widget: string }
+              - { name: address_ko, label: 주소 (한글), widget: string }
+              - { name: address_en, label: 주소 (영문), widget: string }
+              - { name: map_embed, label: 지도 embed 주소, widget: string }
+          - name: recruit
+            label: 학생 모집
+            widget: object
+            fields:
+              - { name: title, label: 제목, widget: string }
+              - { name: body, label: 내용, widget: text }

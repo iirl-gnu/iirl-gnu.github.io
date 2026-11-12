@@ -91,7 +91,7 @@ function renderFooter(site) {
           <p>${esc(c.address_ko)}</p>
           <p>${esc(c.phone)} · <a href="mailto:${esc(c.email)}">${esc(c.email)}</a></p>
         </div>
-        <div class="copy">© ${new Date().getFullYear()} IIRLab, Gyeongsang National University</div>
+        <div class="copy">© ${new Date().getFullYear()} IIRLab, Gyeongsang National University · <a href="admin/">관리자</a></div>
       </div>
     </footer>`;
 }
