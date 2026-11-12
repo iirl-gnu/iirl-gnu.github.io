@@ -11,37 +11,12 @@
 #     poster: media/demos/my-demo.jpg
 #     area: physical-ai                 # research.yml의 연구분야 id
 #     portrait: true                    # 세로 영상이면 true
-#     featured: true                    # 홈 화면 맨 위 큰 영상으로 쓰려면 (하나만)
-
-- id: pendulum-swingup
-  title: 실물 데이터만으로 학습한 역진자 스윙업
-  caption: 3D 프린팅 유성기어 역진자. 정지 상태에서 한 번에 스윙업하고, 손으로 넘어뜨려도 다시 균형을 잡습니다.
-  video: media/demos/pendulum-swingup.mp4
-  poster: media/demos/pendulum-swingup.jpg
-  area: physical-ai
-  portrait: true
-  featured: true
 
 - id: llm-motor-test-loop
   title: 생성형 AI가 스스로 수행하는 모터 시험
   caption: 한국어 지시 1건으로 Claude Code가 시험–기록–분석–게인 조정을 반복해 정상상태 오차를 1.65°에서 0.35°로 줄입니다.
   video: media/demos/llm-motor-test-loop.mp4
   poster: media/demos/llm-motor-test-loop.jpg
-  area: physical-ai
-
-- id: hip-exo-outdoor
-  title: 강화학습 기반 고관절 보행보조로봇 야외 시험
-  caption: 근골격계 모델을 활용한 강화학습 기반 보조 제어기의 야외 보행 시험.
-  video: media/demos/hip-exo-outdoor.mp4
-  poster: media/demos/hip-exo-outdoor.jpg
-  area: wearable
-  portrait: true
-
-- id: ball-and-wheel
-  title: Ball-and-Wheel 시스템 제어
-  caption: 회전하는 바퀴 위에서 공이 떨어지지 않도록 균형을 유지하는 제어 시스템.
-  video: media/demos/ball-and-wheel.webm
-  poster: media/demos/ball-and-wheel.jpg
   area: physical-ai
 
 - id: hopping-robot
@@ -52,33 +27,10 @@
   area: physical-ai
   portrait: true
 
-- id: hip-exo-treadmill
-  title: 고관절 보행보조로봇 트레드밀 시험
-  caption: 트레드밀 위에서 보행 보조 성능을 평가합니다.
-  video: media/demos/hip-exo-treadmill.mp4
-  poster: media/demos/hip-exo-treadmill.jpg
-  area: wearable
-  portrait: true
-
 - id: pendulum-policy-log
   title: 역진자 외란 시험과 실시간 로그
-  caption: 스윙업(0.25배속)과 손 외란 시험 영상에 각오차·모터 속도 그래프를 시각 동기화했습니다.
+  caption: 실물 데이터만으로 학습한 유성기어 역진자. 스윙업(0.25배속)과 손 외란 시험 영상에 각오차·모터 속도 그래프를 시각 동기화했습니다.
   video: media/demos/pendulum-policy-log.mp4
   poster: media/demos/pendulum-policy-log.jpg
-  area: physical-ai
-  portrait: true
-
-- id: hopping-sim-matlab
-  title: LLM + MATLAB으로 만든 호핑 로봇 시뮬레이션
-  caption: MATLAB-MCP로 Claude Code가 MATLAB/Simulink를 직접 실행해 시뮬레이션을 구성합니다.
-  video: media/demos/hopping-sim-matlab.mp4
-  poster: media/demos/hopping-sim-matlab.jpg
-  area: physical-ai
-
-- id: hopping-robot-sim
-  title: 호핑 로봇 학습 시뮬레이션
-  caption: 호핑 로봇 제어 정책 학습 환경.
-  video: media/demos/hopping-robot-sim.mp4
-  poster: media/demos/hopping-robot-sim.jpg
   area: physical-ai
   portrait: true

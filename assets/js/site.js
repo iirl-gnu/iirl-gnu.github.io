@@ -171,46 +171,43 @@ function setupLightbox(demos) {
 
 const pages = {
   async home(site) {
-    const [research, news, pubs, demos] = await Promise.all([
-      loadData("research"), loadData("news"), loadData("publications"), loadData("demos"),
+    const [research, demos, pubs, projects] = await Promise.all([
+      loadData("research"), loadData("demos"), loadData("publications"), loadData("projects"),
     ]);
     const name = esc(site.full_name).replace(/\b([IR])(?=\w)/g, '<span class="initial">$1</span>');
-    const featured = demos.find((d) => d.featured) || demos[0];
-    const others = demos.filter((d) => d !== featured);
     const areaTitles = Object.fromEntries(research.areas.map((a) => [a.id, a.title]));
-    const recent = [...(pubs.international_journal || []), ...(pubs.international_conference || [])]
-      .sort((a, b) => (b.year || 0) - (a.year || 0))
-      .slice(0, 4);
+    const count = (...keys) => keys.reduce((s, k) => s + (pubs[k] || []).length, 0);
+    const stats = [
+      { value: count("international_journal", "domestic_journal", "international_conference", "domestic_conference"), label: "Publications", href: "publications.html" },
+      { value: count("patents_granted", "patents_applied", "patents_domestic"), label: "Patents", href: "publications.html#patents" },
+      { value: (projects.current || []).length, label: "Ongoing Projects", href: "projects.html" },
+    ];
 
     $("#content").innerHTML = `
       <section class="hero">
         <div class="container">
-          <div>
+          <div class="hero-text">
             <span class="headline">${esc(site.headline)}</span>
             <h1>${name}</h1>
             <p class="ko">${esc(site.full_name_ko)}</p>
             <p class="aff">${esc(site.affiliation)}</p>
             <p class="lead">${esc(site.tagline)}</p>
             <div class="btn-row">
-              <a class="btn btn-primary" href="#demos">Open Lab Demos</a>
-              <a class="btn btn-ghost" href="research.html">Our Research</a>
+              <a class="btn btn-primary" href="research.html">Our Research</a>
+              <a class="btn btn-ghost" href="#demos">Open Lab Demos</a>
             </div>
           </div>
-          ${featured ? `
-          <figure class="hero-video">
-            <video src="${esc(featured.video)}" poster="${esc(featured.poster)}" autoplay muted loop playsinline aria-label="${esc(featured.title)}"></video>
-            <figcaption><b>${esc(featured.title)}</b>${esc(areaTitles[featured.area] || "")}</figcaption>
-          </figure>` : ""}
-        </div>
-      </section>
-
-      <section class="section" id="demos">
-        <div class="container">
-          <div class="section-head">
-            <div><p class="eyebrow">Open Lab</p><h2>Demo Videos</h2></div>
-            <span class="muted">영상을 누르면 크게 재생됩니다</span>
+          <div class="hero-panel">
+            <p class="panel-label">Research Focus</p>
+            ${research.areas.map((a, i) => `
+              <a class="focus-item" href="research.html#${esc(a.id)}">
+                <span class="area-index">${String(i + 1).padStart(2, "0")}</span>
+                <span><b>${esc(a.title)}</b><small>${esc(a.title_ko)}</small></span>
+              </a>`).join("")}
+            <div class="hero-stats">
+              ${stats.map((s) => `<a href="${s.href}"><b>${s.value}</b><span>${s.label}</span></a>`).join("")}
+            </div>
           </div>
-          <div class="demo-grid">${others.map((d) => demoCardHTML(d, areaTitles)).join("")}</div>
         </div>
       </section>
 
@@ -221,11 +218,12 @@ const pages = {
             <a class="more-link" href="research.html">All research</a>
           </div>
           <div class="grid grid-3">
-            ${research.areas.filter((a) => a.cover).slice(0, 3).map((a) => `
+            ${research.areas.map((a, i) => `
               <article class="card area-card">
                 <a class="card-link" href="research.html#${esc(a.id)}">
-                  <div class="thumb" style="background-image:url('${esc(a.cover)}');background-size:contain;background-color:#fff"></div>
+                  ${a.cover ? `<div class="thumb" style="background-image:url('${esc(a.cover)}')"></div>` : ""}
                   <div class="card-body">
+                    <span class="area-index">${String(i + 1).padStart(2, "0")}</span>
                     <h3>${esc(a.title)}</h3>
                     <p class="muted" style="margin:0">${esc(a.title_ko)}</p>
                   </div>
@@ -235,27 +233,17 @@ const pages = {
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="demos">
         <div class="container">
           <div class="section-head">
-            <div><p class="eyebrow">Publications</p><h2>Recent papers</h2></div>
-            <a class="more-link" href="publications.html">All publications</a>
+            <div><p class="eyebrow">Open Lab</p><h2>Demo Videos</h2></div>
+            <span class="muted">영상을 누르면 크게 재생됩니다</span>
           </div>
-          <ul class="pub-list">${recent.map((p) => pubItemHTML(p, p.year || "")).join("")}</ul>
+          <div class="demo-grid">${demos.map((d) => demoCardHTML(d, areaTitles)).join("")}</div>
         </div>
       </section>
 
-      <section class="section soft">
-        <div class="container">
-          <div class="section-head">
-            <div><p class="eyebrow">News</p><h2>Latest from the lab</h2></div>
-            <a class="more-link" href="news.html">All news</a>
-          </div>
-          <div class="news-list">${news.slice(0, 3).map(newsItemHTML).join("")}</div>
-        </div>
-      </section>
-
-      <section class="section">
+      <section class="section" style="padding-top:0">
         <div class="container">
           <div class="join-band">
             <div>
@@ -266,12 +254,6 @@ const pages = {
           </div>
         </div>
       </section>`;
-    // innerHTML로 넣은 영상은 muted 속성이 적용되지 않아 자동재생이 막히므로 직접 지정
-    const heroVideo = $(".hero-video video");
-    if (heroVideo) {
-      heroVideo.muted = true;
-      heroVideo.play().catch(() => {});
-    }
     setupLightbox(demos);
   },
 
@@ -282,27 +264,58 @@ const pages = {
 
   async research() {
     const [{ areas }, demos] = await Promise.all([loadData("research"), loadData("demos")]);
-    $("#content").innerHTML = `<div class="container">${areas.map((a, i) => {
-      const areaDemos = demos.filter((d) => d.area === a.id);
-      return `
-      <section class="area" id="${esc(a.id)}">
-        <div class="area-head">
-          <div>
-            <div class="num">${String(i + 1).padStart(2, "0")}</div>
-            <h2>${esc(a.title)}</h2>
-            <div class="ko-title">${esc(a.title_ko)}</div>
-            <p class="summary">${esc(a.summary)}</p>
-          </div>
-          <div>
-            <ul class="topic-list">${(a.topics || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
-            ${a.highlights ? `<div class="highlights">${a.highlights.map((h) => `<div class="highlight"><b>${esc(h.value)}</b><span>${esc(h.label)}</span></div>`).join("")}</div>` : ""}
+    const num = (i) => String(i + 1).padStart(2, "0");
+
+    const overview = `
+      <section class="area-overview">
+        <div class="container">
+          <div class="overview-grid">
+            ${areas.map((a, i) => `
+              <a class="overview-card" href="#${esc(a.id)}">
+                <span class="area-index">${num(i)}</span>
+                <b>${esc(a.title)}</b>
+                <span>${esc(a.title_ko)}</span>
+              </a>`).join("")}
           </div>
         </div>
-        ${a.figures ? `<div class="figures">${a.figures.map((f) => `<figure><img src="${esc(f.src)}" alt="${esc(f.caption)}" loading="lazy"><figcaption>${esc(f.caption)}</figcaption></figure>`).join("")}</div>` : ""}
-        ${areaDemos.length ? `<div class="demo-grid">${areaDemos.map((d) => demoCardHTML(d)).join("")}</div>` : ""}
-        ${a.video ? `<div class="figures"><figure><div class="embed" style="border-radius:0"><iframe src="${esc(a.video)}" allow="autoplay; fullscreen" loading="lazy" title="${esc(a.video_caption || a.title)}"></iframe></div>${a.video_caption ? `<figcaption>${esc(a.video_caption)}</figcaption>` : ""}</figure></div>` : ""}
       </section>`;
-    }).join("")}</div>`;
+
+    const areaHTML = (a, i) => {
+      const areaDemos = demos.filter((d) => d.area === a.id);
+      return `
+      <section class="area${i % 2 ? " alt" : ""}" id="${esc(a.id)}">
+        <div class="container">
+          <div class="area-intro">
+            <div class="area-text">
+              <p class="eyebrow">Research ${num(i)}</p>
+              <h2>${esc(a.title)}</h2>
+              <div class="ko-title">${esc(a.title_ko)}</div>
+              <p class="summary">${esc(a.summary)}</p>
+              ${a.highlights ? `<div class="highlights">${a.highlights.map((h) => `<div class="highlight"><b>${esc(h.value)}</b><span>${esc(h.label)}</span></div>`).join("")}</div>` : ""}
+            </div>
+            ${a.cover ? `<div class="area-cover"><img src="${esc(a.cover)}" alt="${esc(a.title)}" loading="lazy"></div>` : ""}
+          </div>
+
+          <h3 class="block-title">Research Topics</h3>
+          <ol class="topic-grid">${(a.topics || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ol>
+
+          ${a.figures ? `
+            <h3 class="block-title">Figures</h3>
+            <div class="figures">${a.figures.map((f) => `
+              <figure${f.photo ? ' class="photo"' : ""}><img src="${esc(f.src)}" alt="${esc(f.caption)}" loading="lazy"><figcaption>${esc(f.caption)}</figcaption></figure>`).join("")}
+            </div>` : ""}
+
+          ${areaDemos.length ? `
+            <h3 class="block-title">Demo Videos</h3>
+            <div class="demo-grid">${areaDemos.map((d) => demoCardHTML(d)).join("")}</div>` : ""}
+
+          ${a.video ? `
+            <div class="figures"><figure><div class="embed" style="border-radius:0"><iframe src="${esc(a.video)}" allow="autoplay; fullscreen" loading="lazy" title="${esc(a.video_caption || a.title)}"></iframe></div>${a.video_caption ? `<figcaption>${esc(a.video_caption)}</figcaption>` : ""}</figure></div>` : ""}
+        </div>
+      </section>`;
+    };
+
+    $("#content").innerHTML = overview + areas.map(areaHTML).join("");
     setupLightbox(demos);
   },
 
@@ -310,7 +323,7 @@ const pages = {
     const { professor: p, members, alumni } = await loadData("people");
     const memberCard = (m) => `
       <article class="card member">
-        <div class="avatar" style="${m.photo ? `background-image:url('${esc(m.photo)}')` : ""}">${m.photo ? "" : esc(initials(m.name))}</div>
+        <div class="avatar">${esc(initials(m.name))}${m.photo ? `<img src="${esc(m.photo)}" alt="${esc(m.name)}" loading="lazy" onerror="this.remove()">` : ""}</div>
         <h3>${esc(m.name)}</h3>
         ${m.name_alt ? `<div class="alt">${esc(m.name_alt)}</div>` : ""}
         ${m.email ? `<a class="email" href="mailto:${esc(m.email)}">${esc(m.email)}</a>` : ""}

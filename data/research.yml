@@ -8,7 +8,7 @@
 #     topics: [세부 주제, ...]
 #     highlights:                       # 선택: 숫자로 보여줄 성과
 #       - { value: "33/33", label: "스윙업 성공" }
-#     figures:                          # 선택: 그림과 설명
+#     figures:                          # 선택: 그림과 설명 (사진이면 photo: true → 꽉 차게 표시)
 #       - { src: images/research/xxx.jpg, caption: 설명 }
 
 areas:
@@ -48,6 +48,7 @@ areas:
     figures:
       - { src: images/research/hip-exo-rl-framework.jpg, caption: "반사 기반 근골격계 시뮬레이션과 강화학습을 결합한 고관절 보조 정책 학습 (Barati et al., RA-L 2026)" }
       - { src: images/research/ankle-assist-mechanism.jpg, caption: "체중 지지를 고려한 발목 보조로봇 메커니즘" }
+      - { src: images/research/hip-exo-treadmill.jpg, caption: "고관절 보행보조로봇 트레드밀 시험", photo: true }
 
   - id: sdl
     title: AI-based Self-Driving Lab
@@ -68,16 +69,3 @@ areas:
       - { src: images/research/synbot-modules.jpg, caption: "Synbot 실제 배치(9.35 m × 6.65 m)와 모듈 (Ha et al., Sci. Adv. 2023)" }
       - { src: images/research/synbot-structure.jpg, caption: "Synbot 구조: AI S/W 층 · 로봇 S/W 층 · 로봇 층" }
       - { src: images/research/oled-etchant-sdl.jpg, caption: "디스플레이 식각액 개발용 자율실험실 구성" }
-
-  - id: manipulation
-    title: Force Control & Manipulation
-    title_ko: 힘 제어 및 매니퓰레이션
-    summary: >-
-      유연관절 로봇의 외력 추정과 강인 제어에서 출발해, 모바일 매니퓰레이터의
-      순응 제어와 정밀 가공 응용까지 연구합니다.
-    topics:
-      - 유연관절 로봇의 힘 제어 및 외력 추정
-      - 매니퓰레이터 기구 설계와 강인 제어
-      - 고정밀 드릴링을 위한 모바일 매니퓰레이터 순응 제어
-    video: https://drive.google.com/file/d/1GFJ4eWXU18Jg7iUYwOpJvkwj1hCbQmU7/preview
-    video_caption: 힘 정보 기반 모바일 매니퓰레이터 드릴링

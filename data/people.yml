@@ -1,6 +1,6 @@
 # 구성원 정보
 #
-# 새 학생 추가: members 아래 알맞은 그룹(phd / ms / undergrad)에 항목을 추가하세요.
+# 새 구성원 추가: members 아래 알맞은 그룹(Researchers / Ph.D. / M.S. / Undergraduate)에 항목을 추가하세요.
 # 졸업 시: members에서 지우고 alumni 아래 해당 그룹으로 옮기세요.
 #
 #   - name: 홍길동
@@ -16,7 +16,7 @@ professor:
   name_ko: 박영진
   title: Associate Professor
   department: School of Mechanical Engineering, Gyeongsang National University
-  photo: ""   # 예: images/people/youngjin-park.jpg (없으면 이니셜 표시)
+  photo: images/people/youngjin-park.jpg
   phone: +82-55-772-1621
   email: youngjin.park@gnu.ac.kr
   office: Room 410, Building 403, Gajwa Campus
@@ -53,11 +53,26 @@ professor:
       title: Research Staff Member, Samsung Advanced Institute of Technology
 
 members:
+  - group: Researchers
+    people:
+      - name: 김민재
+        name_alt: Minjae Kim
+        photo: images/people/minjae-kim.jpg
+        email: minjae0321@gnu.ac.kr
+        interests: [Human-Robot Interaction, Bio-inspired Robotics, Mechanism Design, Wearable Robot]
+        cv:
+          - 2026.10 – Present | Researcher, Defense Industry Technology Convergence Research Institute, Gyeongsang National University
+          - 2026.06 – 2026.09 | Mechanical Design Engineer, Imoon Healthcare
+          - 2026.01 | Undergraduate Intern, BIRD Lab, POSTECH
+          - 2025.06 – 2025.08 | Undergraduate Intern, AWEAR Lab, GIST
+          - 2023.11 – 2025.06 | Undergraduate Researcher, IIRLab, Gyeongsang National University
+          - B.S. | Mechanical Engineering & Intelligent Robotics, Gyeongsang National University
+
   - group: Ph.D. Students
     people:
       - name: Nguyen Thanh Xuan
         name_alt: 응우옌탄쑤안
-        photo: ""
+        photo: images/people/nguyen-thanh-xuan.jpg
         email: xuan.hn12@gnu.ac.kr
         interests: [Lower-limb Exoskeleton, Optimal Design, Human-Robot Interaction]
         cv:
@@ -67,23 +82,10 @@ members:
 
   - group: M.S. Students
     people:
-      - name: Hossein Barati
-        photo: ""
-        email: hosseinbarati39@gmail.com
-        interests: [Reinforcement Learning, Neuromusculoskeletal Simulation, Rehabilitation Robotics, Intelligent Control]
-        cv:
-          - 2024.09 – Current | M.S. Student, Mechanical Engineering, Gyeongsang National University
-          - 2019.09 – 2024.08 | B.S., Mechanical Engineering, Ferdowsi University of Mashhad
-
-  - group: Undergraduate Students
-    people:
-      - name: 진호경
-        name_alt: Hokyeong Jin
-        photo: ""
-        email: wlsghrud001@gnu.ac.kr
-        interests: [ROS2 for Mobile Robots, Mechanism Design]
-        cv:
-          - Expected 2027.02 | B.S., Mechanical Engineering (Double Major in Intelligent Robotics), Gyeongsang National University
+      - name: Pham Huynh Duc Manh
+        photo: images/people/pham-huynh-duc-manh.jpg
+        email: ducmanh@gnu.ac.kr
+        interests: [Lower-limb Exoskeleton, HRI]
 
 # 졸업생. affiliation을 모르면 비워두세요.
 alumni:
@@ -92,6 +94,8 @@ alumni:
       - { name: Hossein Barati, affiliation: "" }
   - group: Undergraduate
     people:
+      - { name: 진호경, affiliation: "" }
+      - { name: 류건희, affiliation: DGIST }
       - { name: 주찬혁, affiliation: DGIST }
       - { name: 이동언, affiliation: UNIST }
       - { name: 하지훈, affiliation: GIST }

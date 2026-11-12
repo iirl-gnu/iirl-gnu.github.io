@@ -72,9 +72,7 @@ collections:
                   - { label: Physical AI, value: physical-ai }
                   - { label: Wearable Walking-Assist Robots, value: wearable }
                   - { label: AI-based Self-Driving Lab, value: sdl }
-                  - { label: Force Control & Manipulation, value: manipulation }
               - { name: portrait, label: 세로 영상, widget: boolean, default: false, required: false }
-              - { name: featured, label: 홈 화면 맨 위 대표 영상 (하나만), widget: boolean, default: false, required: false }
 
       # ---------------------------------------------------------------- 구성원
       - name: people
@@ -233,6 +231,7 @@ collections:
                 fields:
                   - { name: src, label: 이미지, widget: image }
                   - { name: caption, label: 설명, widget: string }
+                  - { name: photo, label: 사진 (꽉 차게 표시), widget: boolean, default: false, required: false }
               - { name: video, label: 영상 주소 (embed), widget: string, required: false }
               - { name: video_caption, label: 영상 설명, widget: string, required: false }
 

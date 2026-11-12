@@ -8,65 +8,65 @@
   items:
     - name: Franka Research 3
       spec: "DOF: 7"
-      image: ""
+      image: images/equipment/franka-research-3.jpg
     - name: Neuromeka Moby
       spec: "DOF: 6 + 2 (mobile manipulator)"
-      image: ""
+      image: images/equipment/neuromeka-moby.jpg
     - name: KUKA LBR iiwa
       spec: "DOF: 7"
-      image: ""
+      image: images/equipment/kuka-iiwa.jpg
 
 - category: 3D Printers
   items:
     - name: BCN3D Epsilon W50
-      image: ""
+      image: images/equipment/bcn3d-epsilon-w50.jpg
     - name: CreatBot D600 Pro 2
-      image: ""
+      image: images/equipment/creatbot-d600-pro2.jpg
     - name: Bambu Lab X1E
-      image: ""
+      image: images/equipment/bambu-x1e.jpg
     - name: Bambu Lab X1-Carbon
-      image: ""
+      image: images/equipment/bambu-x1-carbon.jpg
     - name: Markforged 3D Printer
-      image: ""
+      image: images/equipment/markforged.jpg
 
 - category: CNC Machines
   items:
     - name: Pocket NC V2-10 (5-axis)
-      image: ""
+      image: images/equipment/pocket-nc-v2-10.jpg
 
 - category: Sensors
   items:
     - name: Pedar
       spec: 인솔형 압력분포 측정기
-      image: ""
+      image: images/equipment/pedar.jpg
     - name: Xsens MVN Awinda Starter
       spec: IMU 모션 캡처
-      image: ""
+      image: images/equipment/xsens-mvn-awinda.jpg
     - name: COSMED K5
       spec: 대사 측정기
-      image: ""
+      image: images/equipment/cosmed-k5.jpg
     - name: Noraxon Ultium EMG
       spec: 근전도 센서
-      image: ""
+      image: images/equipment/noraxon-ultium-emg.jpg
 
 - category: Mobile Robots
   items:
     - name: TurtleBot 4
-      image: ""
+      image: images/equipment/turtlebot4.jpg
     - name: TurtleBot 3 Burger
-      image: ""
+      image: images/equipment/turtlebot3-burger.jpg
 
 - category: Drones
   items:
     - name: Parrot ANAFI Ai
-      image: ""
+      image: images/equipment/parrot-anafi-ai.jpg
     - name: Tello
-      image: ""
+      image: images/equipment/tello.jpg
     - name: Tello EDU
-      image: ""
+      image: images/equipment/tello-edu.jpg
 
 - category: Controllers
   items:
     - name: Speedgoat
       spec: Real-time target machine
-      image: ""
+      image: images/equipment/speedgoat.jpg
